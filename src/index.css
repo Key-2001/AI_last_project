@@ -67,3 +67,21 @@ code {
   color: aliceblue;
   cursor: pointer;
 }
+.option{
+    width: 40%;
+    display: grid;
+    place-items: center;
+}
+.option-item{
+  padding: 0.75rem 0;
+  width: 100%;
+  font-size: 1.25rem;
+  color: aliceblue;
+  background-color: #6ebef7;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.option-item:hover{
+  opacity: 0.6;
+  color: #000;
+}

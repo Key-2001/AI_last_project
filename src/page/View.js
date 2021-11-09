@@ -3,9 +3,9 @@ import React,{useState,useEffect} from 'react'
 import { useGlobalContext } from '../context';
 const View = () => {
 
-    const {data,swapItem,n} = useGlobalContext();
+    const {data,swapItem,n,BFS,DFS,depthDeepening,bestFirstSearch,hillClimbing,beamSearch} = useGlobalContext();
+   
     
-
     return (
         <div className='wrap-view'>
             <div className='header'>
@@ -26,7 +26,23 @@ const View = () => {
                     })}
                 </div>
                 <div className='option'>
-
+                    <button className='option-item' onClick={() => BFS(data)}>
+                        BFS
+                    </button>
+                    <button className='option-item' onClick={() => DFS(data)}>
+                        DFS
+                    </button>
+                    <button className='option-item' onClick={() => depthDeepening(data)}>
+                        Depth Deepening
+                    </button>
+                    <button className='option-item' onClick={() => bestFirstSearch(data)}>
+                        Best First
+                    </button>
+                    <button className='option-item' onClick={() => hillClimbing(data)}>
+                        Hill Climbing
+                    </button><button className='option-item' onClick={() => beamSearch(data)}>
+                        Beam
+                    </button>
                 </div>
             </div>
         </div>
